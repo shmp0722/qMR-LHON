@@ -1,7 +1,6 @@
-function runAFQ_qmr_2LHON_1Ctl
+function afq = runAFQ_qmr_2LHON_1Ctl
 %
 % Run AFQ on LHON1, 2 and Ctl8214
-%
 %
 
 %% set subjects
@@ -21,7 +20,7 @@ afq = AFQ_Create('sub_dirs', sub_dirs, 'sub_group', sub_group, 'clip2rois', 0);
 afq.params.track.algorithm = 'mrtrix';
 afq.params.outdir  = '/peach/shumpei/qMRI/AFQ_dwi96ls';
 afq.params.outname = 'afq_2LHON_1Ctl_02112015.mat';
-
+afq.params.showfigs = 0;
 %% set image files
 % SIR
 for ii = 1:length(sub_dirs),
@@ -57,8 +56,4 @@ afq = AFQ_set(afq, 'images', t1Path);
 afq = AFQ_run(sub_dirs, sub_group, afq);
 
 %%
-
-
-
-
 

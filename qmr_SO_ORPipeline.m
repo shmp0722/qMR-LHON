@@ -1,4 +1,4 @@
-function SO_ORPipeline
+function qmr_SO_ORPipeline
 % this pipeline make raw optic fibers clean.
 % Exclude fibers
 % 1) by anotomical location (waypoint roi)
@@ -147,6 +147,7 @@ end
 %% clean naughty fibers up D3L2
 % fgDir  = fullfile(homeDir,subDir,'/DTI/dti96trilin/fibers/conTrack/OR_100K');
 RoiDir = fullfile(homeDir,subDir,'/DTI/ROIs');
+fgDir  = fullfile(homeDir,subDir,'/DTI/dti96trilin/fibers/conTrack/OR_100K');
 
 for hemisphere = 1:2
     

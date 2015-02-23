@@ -1,0 +1,15 @@
+function qmr_runfs_autosegmentToITK
+
+%%
+% change directory to a subject you want to make segmantation file using freesurfer
+
+%% Set directory
+[homeDir,subDir] = fileparts(pwd);
+% subDir  = 'Ctl8214-RL';
+fsDir   =  getenv('SUBJECTS_DIR');
+t1 = fullfile(pwd,'/DTI/ROIs');
+
+%% autosegmentation with freesurfer
+
+t1  = 't1.nii.gz';
+fs_autosegmentToITK(subDir, t1)

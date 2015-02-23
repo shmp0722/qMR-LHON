@@ -1,4 +1,4 @@
-function SO_GetRois_individual
+function qmr_SO_GetRois_individual
 % This function return ROIs.mat to generate optic tract and optic radiation
 % using conTrack.
 %
